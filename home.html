@@ -170,9 +170,9 @@
     <div class="contact-container">
         <h2 data-translate="Contacto">Contacto</h2>
         <p data-translate="Pronto para revolucionar o seu negócio? Entre em contacto connosco e agende uma consultoria especializada.">Pronto para revolucionar o seu negócio? Entre em contacto connosco e agende uma consultoria especializada.</p>
-        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
             <input type="hidden" name="form-name" value="contact">
-            <p class="hidden">
+            <p hidden>
                 <label>Don't fill this out if you're human: <input name="bot-field" /></label>
             </p>
             <input type="text" name="name" placeholder="Nome" required data-translate="Nome">
@@ -198,5 +198,13 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="scripts.js"></script>
+
+<!-- Dummy form for Netlify -->
+<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="text" name="phone" />
+  <textarea name="message"></textarea>
+</form>
 </body>
 </html>

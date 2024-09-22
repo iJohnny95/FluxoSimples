@@ -124,17 +124,32 @@ document.getElementById("backToTop").onclick = function() {
 
 
 // Add this new code for form submission
-document.querySelector('.contact-form').addEventListener('submit', (e) => {
+document.querySelector('.contact-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
-        method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(new FormData(form)).toString()
-    })
-    .then(() => {
-        alert('Message sent successfully!');
-        form.reset();
-    })
-    .catch((error) => alert('An error occurred: ' + error));
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+
+    try {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form)
+        });
+
+        if (response.ok) {
+            alert('Message sent successfully!');
+            form.reset();
+        } else {
+            throw new Error('Server responded with an error');
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('An error occurred while sending the message. Please try again.');
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+    }
 });
