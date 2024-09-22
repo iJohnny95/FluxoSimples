@@ -48,7 +48,7 @@ const translations = {
         "Enviar Mensagem": "Send Message",
         "Soluções de Automação Empresarial de Elevada Qualidade": "High-Quality Business Automation Solutions",
         "Redefina o futuro da sua empresa com automações personalizadas que elevam a eficiência e simplificam os processos.": "Redefine the future of your company with custom automations that enhance efficiency and simplify processes.",
-        "Agende a Sua Consultoria": "Schedule Your Consultation",
+        "Agende a sua Consultoria": "Schedule Your Consultation",
         "© 2024 FluxoSimples | Soluções Empresariais Premium para uma Transformação Digital": "© 2024 FluxoSimples | Premium Business Solutions for Digital Transformation"
     },
     pt: {
@@ -121,3 +121,27 @@ document.getElementById("backToTop").onclick = function() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const formProps = Object.fromEntries(formData);
+
+    try {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formProps),
+        });
+        const data = await response.json();
+        if (data.success) {
+            alert('Message sent successfully!');
+            e.target.reset();
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    }
+});
