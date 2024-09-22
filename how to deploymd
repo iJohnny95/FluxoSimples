@@ -58,40 +58,39 @@ Netlify is a popular platform for deploying static websites. It offers a free ti
 3. **Access Your Website:**
    - Netlify will provide you with a URL where your site is hosted (e.g., `https://your-site-name.netlify.app`).
 
-## 3. Vercel
-Vercel is another popular platform for deploying static websites and serverless functions. It also offers a free tier.
+
+## How to Push a Commit and Changes to GitHub
 
 ### Steps:
-1. **Sign Up for Vercel:**
-   - Go to Vercel and sign up for an account.
+1. **Make Changes to Your Project:**
+   - Edit your files and make the necessary changes.
 
-2. **Deploy Your Site:**
-   - Click on **New Project**.
-   - Connect your GitHub account and select the repository you want to deploy.
-   - Follow the prompts to configure the build settings (for a static site, the default settings should work).
-   - Click **Deploy**.
+2. **Add the Changes to the Staging Area:**
+   ```sh
+   git add .
+   ```
 
-3. **Access Your Website:**
-   - Vercel will provide you with a URL where your site is hosted (e.g., `https://your-site-name.vercel.app`).
+3. **Commit the Changes:**
+   ```sh
+   git commit -m "Describe your changes"
+   ```
 
-## 4. Local Server with Ngrok
-If you want to share your local development server temporarily, you can use Ngrok.
+4. **Push the Changes to GitHub:**
+   ```sh
+   git push origin main
+   ```
 
-### Steps:
-1. **Install Ngrok:**
-   - Download and install Ngrok from [ngrok.com](https://ngrok.com).
+### Full Command Sequence
+Here is the full sequence of commands you need to run:
+```sh
+git add .
+git commit -m "Describe your changes"
+git push origin main
+```
 
-2. **Run Your Local Server:**
-   - Start your local development server (e.g., using `http-server` or any other local server).
+### Explanation
+- `git add .`: Adds all the changed files to the staging area.
+- `git commit -m "Describe your changes"`: Commits the staged files with a descriptive message.
+- `git push origin main`: Pushes your local `main` branch to the remote repository.
 
-3. **Expose Your Local Server:**
-   - Run Ngrok to expose your local server:
-     ```sh
-     ngrok http 8080
-     ```
-   - Replace `8080` with the port your local server is running on.
-
-4. **Share the URL:**
-   - Ngrok will provide you with a public URL (e.g., `https://abcd1234.ngrok.io`) that you can share with your friends.
-
-Choose the method that best suits your needs. For a more permanent solution, GitHub Pages, Netlify, or Vercel are recommended.
+Run these commands in your terminal, and your changes will be successfully pushed to your GitHub repository.

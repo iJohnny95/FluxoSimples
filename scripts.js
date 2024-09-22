@@ -20,10 +20,18 @@ const translations = {
         "Simplifique a entrada de dados e relatórios, assegurando a sincronização perfeita entre plataformas.": "Simplify data entry and reporting, ensuring perfect synchronization between platforms.",
         "Chatbots Inteligentes": "Intelligent Chatbots",
         "Melhore o atendimento ao cliente com chatbots automáticos, disponíveis 24/7, que garantem uma experiência eficiente.": "Improve customer service with automatic chatbots, available 24/7, ensuring an efficient experience.",
+        "Integração e Automação de API": "API Integration and Automation",
+        "Integramos e automatizamos fluxos de trabalho usando APIs para melhorar a eficiência e reduzir o esforço manual.": "We integrate and automate workflows using APIs to improve efficiency and reduce manual effort.",
+        "Extração e Processamento de Dados": "Data Extraction and Processing",
+        "Automatizamos a extração, transformação e carregamento de dados para garantir informações precisas e oportunas.": "We automate the extraction, transformation, and loading of data to ensure accurate and timely information.",
+        "Automação de Gestão de Leads": "Lead Management Automation",
+        "Automatizamos a atribuição e gestão de leads para garantir acompanhamentos oportunos e melhores taxas de conversão.": "We automate lead assignment and management to ensure timely follow-ups and better conversion rates.",
+        "Automação de Tarefas": "Task Automation",
+        "Automatizamos tarefas diárias para liberar tempo para atividades mais estratégicas.": "We automate daily tasks to free up time for more strategic activities.",
         "O Que Dizem os Nossos Clientes": "What Our Clients Say",
         "A FluxoSimples trouxe uma mudança revolucionária à nossa empresa. A nossa produtividade duplicou com a automação dos processos internos.": "FluxoSimples brought a revolutionary change to our company. Our productivity doubled with the automation of internal processes.",
         "Pedro, Diretor Operacional": "Pedro, Operations Director",
-        "O chatbot implementado pela FluxoSimples aumentou significativamente a satisfação dos nossos clientes e as vendas online cresceram 40%.": "The chatbot implemented by FluxoSimples significantly increased our customer satisfaction and online sales grew by 40%",
+        "O chatbot implementado pela FluxoSimples aumentou significativamente a satisfação dos nossos clientes e as vendas online cresceram 40%.": "The chatbot implemented by FluxoSimples significantly increased our customer satisfaction and online sales grew by 40%.",
         "Ana, Gerente de Vendas": "Ana, Sales Manager",
         "Graças à FluxoSimples, simplificámos os nossos processos de entrada de dados, poupando-nos inúmeras horas todas as semanas.": "Thanks to FluxoSimples, we simplified our data entry processes, saving us countless hours every week.",
         "João, Gestor de TI": "João, IT Manager",
@@ -39,59 +47,32 @@ const translations = {
         "Descreva como podemos ajudar": "Describe how we can help",
         "Enviar Mensagem": "Send Message",
         "Soluções de Automação Empresarial de Elevada Qualidade": "High-Quality Business Automation Solutions",
-        "Redefina o futuro da sua empresa com automações personalizadas que elevam a eficiência e simplificam os processos.": "Redefine the future of your company with personalized automations that enhance efficiency and simplify processes.",
+        "Redefina o futuro da sua empresa com automações personalizadas que elevam a eficiência e simplificam os processos.": "Redefine the future of your company with custom automations that enhance efficiency and simplify processes.",
         "Agende a Sua Consultoria Exclusiva": "Schedule Your Exclusive Consultation",
-        "© 2024 FluxoSimples | Soluções Empresariais Premium para uma Transformação Digital": "© 2024 FluxoSimples | Premium Business Solutions for Digital Transformation",
-        "Email:": "Email:",
-        "Telefone:": "Phone:",
+        "© 2024 FluxoSimples | Soluções Empresariais Premium para uma Transformação Digital": "© 2024 FluxoSimples | Premium Business Solutions for Digital Transformation"
     },
     pt: {
-        // Portuguese text remains the same
+        // Portuguese translations (default)
     }
 };
 
 // Function to set the language
 function setLanguage(lang) {
-    console.log(`Language set to: ${lang}`);
-    const elementsToTranslate = document.querySelectorAll('[data-translate]');
-    elementsToTranslate.forEach(element => {
+    document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         element.textContent = translations[lang][key] || key;
     });
 }
 
-// Initialize Swiper for Testimonials
-function initTestimonialsSwiper() {
-    const swiper = new Swiper('.swiper-container', {
-        loop: true, // Enable infinite loop
-        autoplay: {
-            delay: 5000, // 5 seconds delay
-            disableOnInteraction: false, // Continue autoplay after interactions
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true, // Allow pagination bullets to be clickable
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        effect: 'slide', // Optional: slide effect for transitions
-        slidesPerView: 1, // Show one slide at a time
-    });
-
-    // Pause autoplay on mouse enter and resume on mouse leave
-    const swiperContainer = document.querySelector('.swiper-container');
-    swiperContainer.addEventListener('mouseenter', () => {
-        swiper.autoplay.stop();
-    });
-    swiperContainer.addEventListener('mouseleave', () => {
-        swiper.autoplay.start();
-    });
-}
-
-// Initialize all functionalities when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initTestimonialsSwiper(); // Initialize Swiper for testimonials
-    setLanguage('pt'); // Set default language to Portuguese
+// Initialize Swiper
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
