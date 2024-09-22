@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluxoSimples - Automação Empresarial de Excelência</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <a href="#">FluxoSimples</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#services" data-translate="Serviços">Serviços</a></li>
+                <li><a href="#about" data-translate="Sobre Nós">Sobre Nós</a></li>
+                <li><a href="#testimonials" data-translate="Testemunhos">Testemunhos</a></li>
+                <li><a href="#contact" data-translate="Contacto">Contacto</a></li>
+                <li class="language-switch">
+                    <a href="#" onclick="setLanguage('pt')" title="Português">
+                        <img src="https://cdn.countryflags.com/thumbs/portugal/flag-round-250.png" alt="Bandeira Portuguesa" width="24" height="24"> PT
+                    </a>
+                    <a href="#" onclick="setLanguage('en')" title="English">
+                        <img src="https://cdn-icons-png.flaticon.com/512/9906/9906532.png" alt="Bandeira Inglesa" width="24" height="24"> EN
+                    </a>
+                </li>
+            </ul>
+            <span class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></span>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 data-translate="Soluções de Automação Empresarial de Elevada Qualidade">Soluções de Automação Empresarial de Elevada Qualidade</h1>
+        <p data-translate="Redefina o futuro da sua empresa com automações personalizadas que elevam a eficiência e simplificam os processos.">Redefina o futuro da sua empresa com automações personalizadas que elevam a eficiência e simplificam os processos.</p>
+        <a href="#contact" class="btn-primary" data-translate="Agende a Sua Consultoria Exclusiva">Agende a Sua Consultoria Exclusiva</a>
+    </div>
+</section>
+
+<section id="services" class="animated-section">
+    <div class="services-container">
+        <div class="section-title">
+            <h2 data-translate="O Que Fazemos">O Que Fazemos</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-cogs"></i>
+                <h3 data-translate="Automação de Processos">Automação de Processos</h3>
+                <p data-translate="Melhoramos a eficiência dos seus fluxos de trabalho com soluções automatizadas, eliminando o esforço manual desnecessário.">Melhoramos a eficiência dos seus fluxos de trabalho com soluções automatizadas, eliminando o esforço manual desnecessário.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-users"></i>
+                <h3 data-translate="Gestão Automatizada de CRM">Gestão Automatizada de CRM</h3>
+                <p data-translate="Transforme a forma como comunica com os seus clientes, garantindo um acompanhamento eficiente e proativo.">Transforme a forma como comunica com os seus clientes, garantindo um acompanhamento eficiente e proativo.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-chart-line"></i>
+                <h3 data-translate="Automação de Dados">Automação de Dados</h3>
+                <p data-translate="Simplifique a entrada de dados e relatórios, assegurando a sincronização perfeita entre plataformas.">Simplifique a entrada de dados e relatórios, assegurando a sincronização perfeita entre plataformas.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-robot"></i>
+                <h3 data-translate="Chatbots Inteligentes">Chatbots Inteligentes</h3>
+                <p data-translate="Melhore o atendimento ao cliente com chatbots automáticos, disponíveis 24/7, que garantem uma experiência eficiente.">Melhore o atendimento ao cliente com chatbots automáticos, disponíveis 24/7, que garantem uma experiência eficiente.</p>
+            </div>
+            <!-- New Services -->
+            <div class="service-item">
+                <i class="fas fa-plug"></i>
+                <h3 data-translate="Integração e Automação de API">Integração e Automação de API</h3>
+                <p data-translate="Integramos e automatizamos fluxos de trabalho usando APIs para melhorar a eficiência e reduzir o esforço manual.">Integramos e automatizamos fluxos de trabalho usando APIs para melhorar a eficiência e reduzir o esforço manual.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-database"></i>
+                <h3 data-translate="Extração e Processamento de Dados">Extração e Processamento de Dados</h3>
+                <p data-translate="Automatizamos a extração, transformação e carregamento de dados para garantir informações precisas e oportunas.">Automatizamos a extração, transformação e carregamento de dados para garantir informações precisas e oportunas.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-user-tag"></i>
+                <h3 data-translate="Automação de Gestão de Leads">Automação de Gestão de Leads</h3>
+                <p data-translate="Automatizamos a atribuição e gestão de leads para garantir acompanhamentos oportunos e melhores taxas de conversão.">Automatizamos a atribuição e gestão de leads para garantir acompanhamentos oportunos e melhores taxas de conversão.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-tasks"></i>
+                <h3 data-translate="Automação de Tarefas">Automação de Tarefas</h3>
+                <p data-translate="Automatizamos tarefas diárias para liberar tempo para atividades mais estratégicas.">Automatizamos tarefas diárias para liberar tempo para atividades mais estratégicas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=800&q=80" alt="Sobre Nós">
+        </div>
+        <div class="about-content">
+            <h2 data-translate="Quem Somos">Quem Somos</h2>
+            <p data-translate="Com uma equipa de especialistas em automação sediada em Portugal, a nossa missão é elevar os processos empresariais através de soluções inovadoras e de alto impacto. Transformamos desafios em oportunidades, ajudando empresas a focar-se no crescimento sustentável.">Com uma equipa de especialistas em automação sediada em Portugal, a nossa missão é elevar os processos empresariais através de soluções inovadoras e de alto impacto. Transformamos desafios em oportunidades, ajudando empresas a focar-se no crescimento sustentável.</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="animated-section">
+    <div class="testimonials-container">
+        <div class="section-title">
+            <h2 id="testimonials-title" data-translate="O Que Dizem os Nossos Clientes">O Que Dizem os Nossos Clientes</h2>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide testimonial-item">
+                    <img src="https://via.placeholder.com/100" alt="Pedro" class="testimonial-img">
+                    <p id="testimonial1-text" data-translate="A FluxoSimples trouxe uma mudança revolucionária à nossa empresa. A nossa produtividade duplicou com a automação dos processos internos.">"A FluxoSimples trouxe uma mudança revolucionária à nossa empresa. A nossa produtividade duplicou com a automação dos processos internos."</p>
+                    <p id="testimonial1-author" data-translate="Pedro, Diretor Operacional">- Pedro, Diretor Operacional</p>
+                    <div class="star-rating">
+                        ★★★★☆
+                    </div>
+                </div>
+                <div class="swiper-slide testimonial-item">
+                    <img src="https://via.placeholder.com/100" alt="Ana" class="testimonial-img">
+                    <p id="testimonial2-text" data-translate="O chatbot implementado pela FluxoSimples aumentou significativamente a satisfação dos nossos clientes e as vendas online cresceram 40%.">"O chatbot implementado pela FluxoSimples aumentou significativamente a satisfação dos nossos clientes e as vendas online cresceram 40%."</p>
+                    <p id="testimonial2-author" data-translate="Ana, Gerente de Vendas">- Ana, Gerente de Vendas</p>
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                </div>
+                <div class="swiper-slide testimonial-item">
+                    <img src="https://via.placeholder.com/100" alt="João" class="testimonial-img">
+                    <p id="testimonial3-text" data-translate="Graças à FluxoSimples, simplificámos os nossos processos de entrada de dados, poupando-nos inúmeras horas todas as semanas.">"Graças à FluxoSimples, simplificámos os nossos processos de entrada de dados, poupando-nos inúmeras horas todas as semanas."</p>
+                    <p id="testimonial3-author" data-translate="João, Gestor de TI">- João, Gestor de TI</p>
+                    <div class="star-rating">
+                        ★★★★☆
+                    </div>
+                </div>
+                <div class="swiper-slide testimonial-item">
+                    <img src="https://via.placeholder.com/100" alt="Maria" class="testimonial-img">
+                    <p id="testimonial4-text" data-translate="As soluções de automação de fluxos de trabalho fornecidas pela FluxoSimples melhoraram muito a nossa comunicação interna e eficiência.">"As soluções de automação de fluxos de trabalho fornecidas pela FluxoSimples melhoraram muito a nossa comunicação interna e eficiência."</p>
+                    <p id="testimonial4-author" data-translate="Maria, Diretora de RH">- Maria, Diretora de RH</p>
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                </div>
+                <div class="swiper-slide testimonial-item">
+                    <img src="https://via.placeholder.com/100" alt="Luís" class="testimonial-img">
+                    <p id="testimonial5-text" data-translate="O nosso atendimento ao cliente nunca foi melhor desde que implementámos os chatbots inteligentes da FluxoSimples.">"O nosso atendimento ao cliente nunca foi melhor desde que implementámos os chatbots inteligentes da FluxoSimples."</p>
+                    <p id="testimonial5-author" data-translate="Luís, Gestor de Atendimento ao Cliente">- Luís, Gestor de Atendimento ao Cliente</p>
+                    <div class="star-rating">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-container">
+        <h2 data-translate="Contacto">Contacto</h2>
+        <p data-translate="Pronto para revolucionar o seu negócio? Entre em contacto connosco e agende uma consultoria especializada.">Pronto para revolucionar o seu negócio? Entre em contacto connosco e agende uma consultoria especializada.</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Nome" required data-translate="Nome">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Telefone" required data-translate="Telefone">
+            <textarea name="message" placeholder="Descreva como podemos ajudar" required data-translate="Descreva como podemos ajudar"></textarea>
+            <button type="submit" class="btn-primary" data-translate="Enviar Mensagem">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p data-translate="© 2024 FluxoSimples | Soluções Empresariais Premium para uma Transformação Digital">© 2024 FluxoSimples | Soluções Empresariais Premium para uma Transformação Digital</p>
+    <p>Email: <a href="mailto:info@fluxosimples.pt">info@fluxosimples.pt</a> | Telefone: +351 123 456 789</p>
+    <p>
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+    </p>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
