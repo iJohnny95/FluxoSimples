@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://dazzling-fenglisu-9e1fe3.netlify.app',
+  origin: ['https://dazzling-fenglisu-9e1fe3.netlify.app', 'http://localhost:3000', 'http://localhost:8888'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
