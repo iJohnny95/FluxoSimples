@@ -129,7 +129,7 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 
     try {
         console.log('Submitting form data:', formProps);
-        const response = await fetch('/api/contact', {
+        const response = await fetch('/.netlify/functions/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
