@@ -30,3 +30,15 @@ app.use(express.static('public'));
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
+app.post('/api/contact', async (req, res) => {
+  try {
+    const { name, email, phone, message } = req.body;
+    console.log('Received contact form submission:', { name, email, phone, message });
+    // Here you would typically save this data to a database
+    res.json({ success: true });
+  } catch (error) {
+    console.error('Error processing contact form:', error);
+    res.status(500).json({ success: false, error: 'Server error' });
+  }
+});
+
