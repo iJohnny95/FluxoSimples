@@ -8,7 +8,11 @@ const adminRoutes = require('./routes/admin');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://dazzling-fenglisu-9e1fe3.netlify.app',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // Connect to MongoDB
@@ -25,3 +29,4 @@ app.use(express.static('public'));
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
