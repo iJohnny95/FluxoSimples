@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Admin = require('../Admin');
-const Contact = require('../Contact');
+const Contact = require('../models/Contact');
 
 const authMiddleware = (req, res, next) => {
     const token = req.header('Authorization');
