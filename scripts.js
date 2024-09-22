@@ -128,6 +128,7 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
     const formProps = Object.fromEntries(formData);
 
     try {
+        console.log('Submitting form data:', formProps);
         const response = await fetch('/api/contact', {
             method: 'POST',
             headers: {
@@ -135,15 +136,19 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
             },
             body: JSON.stringify(formProps),
         });
+        
+        console.log('Response status:', response.status);
         const data = await response.json();
-        if (response.ok) {
+        console.log('Response data:', data);
+        
+        if (response.ok && data.success) {
             alert('Message sent successfully!');
             e.target.reset();
         } else {
-            throw new Error(data.error || 'Server error');
+            throw new Error(data.error || 'Server responded with an error');
         }
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error submitting form:', error);
         alert('An error occurred: ' + error.message);
     }
 });
