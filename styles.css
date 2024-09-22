@@ -47,7 +47,7 @@ header {
 .logo-text {
     font-size: 24px;
     font-weight: 700;
-    color: #1EC1B7;
+    color: #23A8E0;
     text-decoration: none;
 }
 
@@ -73,7 +73,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #1EC1B7;
+    color: #23A8E0;
 }
 
 /* Language Switcher */
@@ -145,7 +145,7 @@ nav {
 }
 
 .hero a {
-    background-color: #1EC1B7;
+    background-color: #23A8E0;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -155,7 +155,7 @@ nav {
 }
 
 .hero a:hover {
-    background-color: #1EC1B7;
+    background-color: #23A8E0;
 }
 
 /* Services Section */
@@ -199,7 +199,7 @@ nav {
 
 .service-item i {
     font-size: 50px;
-    color: #1EC1B7;
+    color: #23A8E0;
     margin-bottom: 20px;
 }
 
@@ -297,7 +297,7 @@ nav {
     padding: 15px;
     font-size: 18px;
     border: none;
-    background-color: #1EC1B7;
+    background-color: #23A8E0;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -321,7 +321,7 @@ footer p {
 }
 
 footer a {
-    color: #1EC1B7;
+    color: #23A8E0;
     text-decoration: none;
 }
 
@@ -535,7 +535,7 @@ img {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #1EC1B7;
+    background-color: #23A8E0;
     color: white;
     cursor: pointer;
     padding: 15px;
