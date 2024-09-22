@@ -1,5 +1,16 @@
-[[redirects]]
-  from = "/api/*"
-  to = "http://localhost:3000/api/:splat"
-  status = 200
-  force = true
+   [build]
+     publish = "."
+     command = "# no build command"
+
+   [dev]
+     framework = "#static"
+     command = "npm start"
+     targetPort = 3000
+     port = 8888
+     publish = "."
+
+   [[redirects]]
+     from = "/api/*"
+     to = "http://localhost:3000/api/:splat"
+     status = 200
+     force = true
