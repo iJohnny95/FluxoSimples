@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -18,6 +18,20 @@ mongoose.connect(process.env.MONGODB_URI)
   .catch(err => console.error('Could not connect to MongoDB', err));
 
 // Your routes here
+
+app.post('/api/contact', async (req, res) => {
+  try {
+    console.log('Received contact form submission:', req.body);
+    // Your existing code to handle the contact form submission
+    // ...
+    res.json({ success: true });
+  } catch (error) {
+    console.error('Error processing contact form:', error);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+console.log('MONGODB_URI:', process.env.MONGODB_URI);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
