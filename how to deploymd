@@ -79,18 +79,3 @@ Netlify is a popular platform for deploying static websites. It offers a free ti
    ```sh
    git push origin main
    ```
-
-### Full Command Sequence
-Here is the full sequence of commands you need to run:
-```sh
-git add .
-git commit -m "Describe your changes"
-git push origin main
-```
-
-### Explanation
-- `git add .`: Adds all the changed files to the staging area.
-- `git commit -m "Describe your changes"`: Commits the staged files with a descriptive message.
-- `git push origin main`: Pushes your local `main` branch to the remote repository.
-
-Run these commands in your terminal, and your changes will be successfully pushed to your GitHub repository.

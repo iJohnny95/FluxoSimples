@@ -356,6 +356,17 @@ footer a:hover {
     .nav-links.active {
         display: flex;
     }
+
+    /* Adjust button size for mobile */
+    .hero a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* Remove gap in the "Who We Are" section */
+    .about-container {
+        gap: 20px;
+    }
 }
 
 /* Testimonials */
