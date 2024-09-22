@@ -138,7 +138,13 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
         });
         
         console.log('Response status:', response.status);
-        const data = await response.json();
+        let data;
+        try {
+            data = await response.json();
+        } catch (error) {
+            console.error('Error parsing JSON:', error);
+            throw new Error('Invalid response from server');
+        }
         console.log('Response data:', data);
         
         if (response.ok && data.success) {

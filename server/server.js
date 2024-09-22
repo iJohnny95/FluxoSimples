@@ -19,8 +19,8 @@ app.use('/api/contact', contactRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error('Server error:', err.stack);
-  res.status(500).json({ success: false, error: 'Internal server error' });
+  console.error('Server error:', err);
+  res.status(500).json({ success: false, error: err.message || 'Internal server error' });
 });
 
 const port = process.env.PORT || 3001;

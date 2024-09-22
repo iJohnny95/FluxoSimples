@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Contact = require('../models/Contact');
 
-router.post('/', async (req, res, next) => {
+router.post('/', async (req, res) => {
     try {
         console.log('Received contact form submission:', req.body);
         const { name, email, phone, message } = req.body;
@@ -12,7 +12,7 @@ router.post('/', async (req, res, next) => {
         res.json({ success: true, message: 'Contact saved successfully' });
     } catch (error) {
         console.error('Error saving contact:', error);
-        next(error);
+        res.status(500).json({ success: false, error: error.message || 'Error saving contact' });
     }
 });
 
