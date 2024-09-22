@@ -135,10 +135,15 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
             },
             body: JSON.stringify(formProps),
         });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
         if (data.success) {
             alert('Message sent successfully!');
             e.target.reset();
+        } else {
+            throw new Error('Server responded with an error');
         }
     } catch (error) {
         console.error('Error:', error);

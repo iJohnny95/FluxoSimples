@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-  origin: ['https://dazzling-fenglisu-9e1fe3.netlify.app', 'http://localhost:8888', 'http://localhost:3000'],
+  origin: ['https://dazzling-fenglisu-9e1fe3.netlify.app', 'http://localhost:8888'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
