@@ -29,15 +29,15 @@ const translations = {
         "Automação de Tarefas": "Task Automation",
         "Automatizamos tarefas diárias para liberar tempo para atividades mais estratégicas.": "We automate daily tasks to free up time for more strategic activities.",
         "O Que Dizem os Nossos Clientes": "What Our Clients Say",
-        "A FluxoSimples trouxe uma mudança revolucionária à nossa empresa. A nossa produtividade duplicou com a automação dos processos internos.": "FluxoSimples brought a revolutionary change to our company. Our productivity doubled with the automation of internal processes.",
+        "A SimplesFluxo trouxe uma mudança revolucionária à nossa empresa. A nossa produtividade duplicou com a automação dos processos internos.": "SimplesFluxo brought a revolutionary change to our company. Our productivity doubled with the automation of internal processes.",
         "Pedro, Diretor Operacional": "Pedro, Operations Director",
-        "O chatbot implementado pela FluxoSimples aumentou significativamente a satisfação dos nossos clientes e as vendas online cresceram 40%.": "The chatbot implemented by FluxoSimples significantly increased our customer satisfaction and online sales grew by 40%.",
+        "O chatbot implementado pela SimplesFluxo aumentou significativamente a satisfação dos nossos clientes e as vendas online cresceram 40%.": "The chatbot implemented by SimplesFluxo significantly increased our customer satisfaction and online sales grew by 40%.",
         "Ana, Gerente de Vendas": "Ana, Sales Manager",
-        "Graças à FluxoSimples, simplificámos os nossos processos de entrada de dados, poupando-nos inúmeras horas todas as semanas.": "Thanks to FluxoSimples, we simplified our data entry processes, saving us countless hours every week.",
+        "Graças à SimplesFluxo, simplificámos os nossos processos de entrada de dados, poupando-nos inúmeras horas todas as semanas.": "Thanks to SimplesFluxo, we simplified our data entry processes, saving us countless hours every week.",
         "João, Gestor de TI": "João, IT Manager",
-        "As soluções de automação de fluxos de trabalho fornecidas pela FluxoSimples melhoraram muito a nossa comunicação interna e eficiência.": "The workflow automation solutions provided by FluxoSimples greatly improved our internal communication and efficiency.",
+        "As soluções de automação de fluxos de trabalho fornecidas pela SimplesFluxo melhoraram muito a nossa comunicação interna e eficiência.": "The workflow automation solutions provided by SimplesFluxo greatly improved our internal communication and efficiency.",
         "Maria, Diretora de RH": "Maria, HR Director",
-        "O nosso atendimento ao cliente nunca foi melhor desde que implementámos os chatbots inteligentes da FluxoSimples.": "Our customer service has never been better since we implemented FluxoSimples' intelligent chatbots.",
+        "O nosso atendimento ao cliente nunca foi melhor desde que implementámos os chatbots inteligentes da SimplesFluxo.": "Our customer service has never been better since we implemented SimplesFluxo' intelligent chatbots.",
         "Luís, Gestor de Atendimento ao Cliente": "Luís, Customer Service Manager",
         "Quem Somos": "Who We Are",
         "Com uma equipa de especialistas em automação sediada em Portugal, a nossa missão é elevar os processos empresariais através de soluções inovadoras e de alto impacto. Transformamos desafios em oportunidades, ajudando empresas a focar-se no crescimento sustentável.": "With a team of automation specialists based in Portugal, our mission is to elevate business processes through innovative and high-impact solutions. We turn challenges into opportunities, helping companies focus on sustainable growth.",
@@ -49,7 +49,7 @@ const translations = {
         "Soluções de Automação Empresarial de Elevada Qualidade": "High-Quality Business Automation Solutions",
         "Redefina o futuro da sua empresa com automações personalizadas que elevam a eficiência e simplificam os processos.": "Redefine the future of your company with custom automations that enhance efficiency and simplify processes.",
         "Agende a sua Consultoria": "Schedule Your Consultation",
-        "© 2024 FluxoSimples | Soluções Empresariais Premium para uma Transformação Digital": "© 2024 FluxoSimples | Premium Business Solutions for Digital Transformation"
+        "© 2024 SimplesFluxo | Soluções Empresariais Premium para uma Transformação Digital": "© 2024 SimplesFluxo | Premium Business Solutions for Digital Transformation"
     },
     pt: {
         // Portuguese translations (default)
