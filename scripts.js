@@ -138,14 +138,19 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
         });
         
         console.log('Response status:', response.status);
+        console.log('Response headers:', Object.fromEntries(response.headers));
+        
+        const responseText = await response.text();
+        console.log('Raw response:', responseText);
+        
         let data;
         try {
-            data = await response.json();
+            data = JSON.parse(responseText);
         } catch (error) {
             console.error('Error parsing JSON:', error);
-            throw new Error('Invalid response from server');
+            throw new Error('Invalid response from server: ' + responseText);
         }
-        console.log('Response data:', data);
+        console.log('Parsed response data:', data);
         
         if (response.ok && data.success) {
             alert('Message sent successfully!');

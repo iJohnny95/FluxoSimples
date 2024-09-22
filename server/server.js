@@ -23,6 +23,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ success: false, error: err.message || 'Internal server error' });
 });
 
+// Add this catch-all route at the end
+app.use('*', (req, res) => {
+  res.status(404).json({ success: false, error: 'Not Found' });
+});
+
 const port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`Server running on port ${port}`));
 

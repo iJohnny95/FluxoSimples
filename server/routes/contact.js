@@ -7,8 +7,8 @@ router.post('/', async (req, res) => {
         console.log('Received contact form submission:', req.body);
         const { name, email, phone, message } = req.body;
         const newContact = new Contact({ name, email, phone, message });
-        await newContact.save();
-        console.log('Contact saved successfully');
+        const savedContact = await newContact.save();
+        console.log('Contact saved successfully:', savedContact);
         res.json({ success: true, message: 'Contact saved successfully' });
     } catch (error) {
         console.error('Error saving contact:', error);
