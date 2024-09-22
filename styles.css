@@ -41,10 +41,13 @@ header {
 }
 
 .logo a {
-    font-size: 24px;
-    font-weight: 700;
-    color: #007bff;
-    text-decoration: none;
+    display: block;
+}
+
+.logo img {
+    width: 176.19px;
+    height: 25px;
+    object-fit: contain;
 }
 
 nav {
@@ -69,7 +72,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #007bff;
+    color: #1EC1B7;
 }
 
 /* Language Switcher */
@@ -141,7 +144,7 @@ nav {
 }
 
 .hero a {
-    background-color: #007bff;
+    background-color: #1EC1B7;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -195,7 +198,7 @@ nav {
 
 .service-item i {
     font-size: 50px;
-    color: #007bff;
+    color: #1EC1B7;
     margin-bottom: 20px;
 }
 
@@ -293,7 +296,7 @@ nav {
     padding: 15px;
     font-size: 18px;
     border: none;
-    background-color: #007bff;
+    background-color: #1EC1B7;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -317,7 +320,7 @@ footer p {
 }
 
 footer a {
-    color: #007bff;
+    color: #1EC1B7;
     text-decoration: none;
 }
 
@@ -531,7 +534,7 @@ img {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #007bff;
+    background-color: #1EC1B7;
     color: white;
     cursor: pointer;
     padding: 15px;
