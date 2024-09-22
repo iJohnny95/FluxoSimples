@@ -122,44 +122,19 @@ document.getElementById("backToTop").onclick = function() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-document.querySelector('.contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const formProps = Object.fromEntries(formData);
 
-    try {
-        console.log('Submitting form data:', formProps);
-        const response = await fetch('/.netlify/functions/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formProps),
-        });
-        
-        console.log('Response status:', response.status);
-        console.log('Response headers:', Object.fromEntries(response.headers));
-        
-        const responseText = await response.text();
-        console.log('Raw response:', responseText);
-        
-        let data;
-        try {
-            data = JSON.parse(responseText);
-        } catch (error) {
-            console.error('Error parsing JSON:', error);
-            throw new Error('Invalid response from server: ' + responseText);
-        }
-        console.log('Parsed response data:', data);
-        
-        if (response.ok && data.success) {
-            alert('Message sent successfully!');
-            e.target.reset();
-        } else {
-            throw new Error(data.error || 'Server responded with an error');
-        }
-    } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('An error occurred: ' + error.message);
-    }
+// Add this new code for form submission
+document.querySelector('.contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(() => {
+        alert('Message sent successfully!');
+        form.reset();
+    })
+    .catch((error) => alert('An error occurred: ' + error));
 });
