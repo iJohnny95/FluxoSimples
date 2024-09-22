@@ -48,7 +48,7 @@ const translations = {
         "Enviar Mensagem": "Send Message",
         "Soluções de Automação Empresarial de Elevada Qualidade": "High-Quality Business Automation Solutions",
         "Redefina o futuro da sua empresa com automações personalizadas que elevam a eficiência e simplificam os processos.": "Redefine the future of your company with custom automations that enhance efficiency and simplify processes.",
-        "Agende a Sua Consultoria Exclusiva": "Schedule Your Exclusive Consultation",
+        "Agende a Sua Consultoria Exclusiva": "Schedule Your Consultation",
         "© 2024 FluxoSimples | Soluções Empresariais Premium para uma Transformação Digital": "© 2024 FluxoSimples | Premium Business Solutions for Digital Transformation"
     },
     pt: {
