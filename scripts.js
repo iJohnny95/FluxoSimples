@@ -109,10 +109,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+    var backToTopButton = document.getElementById("backToTop");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("backToTop").style.display = "block";
+        backToTopButton.classList.add("visible");
     } else {
-        document.getElementById("backToTop").style.display = "none";
+        backToTopButton.classList.remove("visible");
     }
 }
 

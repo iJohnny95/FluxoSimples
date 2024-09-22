@@ -524,7 +524,7 @@ img {
 
 /* Back to Top */
 #backToTop {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -541,4 +541,11 @@ img {
 
 #backToTop:hover {
     background-color: #0056b3;
+}
+
+/* Show the button only on mobile devices */
+@media (max-width: 768px) {
+    #backToTop.visible {
+        display: block;
+    }
 }
