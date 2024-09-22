@@ -2,6 +2,7 @@ require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const Contact = require('./models/Contact');
 
 const app = express();
 
@@ -21,9 +22,9 @@ mongoose.connect(process.env.MONGODB_URI)
 
 app.post('/api/contact', async (req, res) => {
   try {
-    console.log('Received contact form submission:', req.body);
-    // Your existing code to handle the contact form submission
-    // ...
+    const { name, email, message } = req.body;
+    const newContact = new Contact({ name, email, message });
+    await newContact.save();
     res.json({ success: true });
   } catch (error) {
     console.error('Error processing contact form:', error);

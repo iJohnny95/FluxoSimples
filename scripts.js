@@ -135,17 +135,15 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
             },
             body: JSON.stringify(formProps),
         });
-        console.log('Response status:', response.status);
         const data = await response.json();
-        console.log('Response data:', data);
-        if (data.success) {
+        if (response.ok) {
             alert('Message sent successfully!');
             e.target.reset();
         } else {
-            throw new Error('Server responded with an error');
+            throw new Error(data.error || 'Server error');
         }
     } catch (error) {
-        console.error('Fetch error:', error);
-        alert('An error occurred. Please try again.');
+        console.error('Error:', error);
+        alert('An error occurred: ' + error.message);
     }
 });
